@@ -657,7 +657,8 @@ vite-app/
         ├── ai/
         └── utils.jsx
 The exact structure may evolve as the application develops.
-🚀 Quick Start
+
+# 🚀 Quick Start
 1. Install Node.js
 Node.js 18+ is recommended.
 Verify:
@@ -682,7 +683,8 @@ Important
 Never expose:
 SUPABASE_SERVICE_ROLE_KEY
 or other server-side secrets in the Vite frontend.
-🗄️ Database
+
+# 🗄️ Database
 The Supabase database should contain the entities required by the application's current feature set.
 Core domains include:
 Authentication
@@ -711,7 +713,8 @@ Interviews
 Audit Logs
 Database architecture should evolve with the product.
 Where RLS is enabled, policies must be designed around the actual role and permission model rather than simply granting every authenticated user access to every record.
-🔒 Data Security
+
+# 🔒 Data Security
 InfinityCore follows a security-first architecture.
 Principles include:
 Least-privilege access
@@ -725,7 +728,8 @@ Input validation
 Database constraints
 Protected secrets
 Human oversight for consequential AI-assisted decisions
-🤖 AI Safety & Governance
+
+# 🤖 AI Safety & Governance
 AI features are designed to assist, not silently replace, responsible human decision-making.
 AI may:
 Summarize
@@ -744,7 +748,8 @@ Financial exceptions
 Account restrictions
 Other high-impact decisions
 AI outputs should be clearly identified as AI-assisted where appropriate.
-📊 Business Intelligence
+
+# 📊 Business Intelligence
 InfinityCore transforms operational data into management intelligence.
 Possible insights include:
 Customer
@@ -773,7 +778,8 @@ Interview pipeline
 Hiring turnaround
 The objective is not to create charts for decoration.
 Every visualization should answer a business question.
-💡 Process Intelligence
+
+# 💡 Process Intelligence
 InfinityCore should continuously expose operational bottlenecks.
 Example:
 Loan processing time increased by 17%.
@@ -791,7 +797,8 @@ INSIGHT
 ACTION
  ↓
 IMPROVEMENT
-🧩 Design Philosophy
+
+# 🧩 Design Philosophy
 InfinityCore should feel:
 Modern
 Premium
@@ -815,14 +822,16 @@ Executive
 Intelligence-oriented.
 Admin
 Control-oriented.
-📱 Responsive Experience
+
+# 📱 Responsive Experience
 InfinityCore is designed to support responsive experiences across:
 Desktop
 Tablet
 Mobile
 Customers should have a particularly streamlined mobile experience for everyday banking.
 Operational staff may have richer desktop workflows where appropriate.
-☁️ Deployment
+
+# ☁️ Deployment
 InfinityCore can be deployed using platforms such as:
 Vercel
 npm run build
@@ -844,7 +853,8 @@ Test customer data isolation.
 Test document access.
 Test audit logging.
 Test critical workflows.
-🛠️ Development Commands
+
+# 🛠️ Development Commands
 Command
 Purpose
 npm run dev
@@ -853,7 +863,8 @@ npm run build
 Create production build
 npm run preview
 Preview production build
-🧪 MVP Demonstration Flow
+
+# 🧪 MVP Demonstration Flow
 The intended InfinityCore demonstration can follow this scenario:
 1. Customer
 A customer signs in.
@@ -914,7 +925,8 @@ Management should know:
 What is happening across the organization?
 And InfinityCore should continuously help answer:
 What should happen next?
-📜 Project Status
+
+#📜 Project Status
 InfinityCore is an evolving MVP and demonstration platform.
 Current development priorities include:
 Role-aware experiences
