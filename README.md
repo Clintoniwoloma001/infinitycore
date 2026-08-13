@@ -1,477 +1,878 @@
-# 🏦 Infinity Bank — Operations Platform (Vite + React + Supabase)
+🏦 InfinityCore — Intelligent, Role-Aware Banking & Operations Platform
+One Core. Multiple Experiences. One Source of Truth.
+InfinityCore is a role-aware digital banking, workforce, workflow automation, and business intelligence platform designed for modern microfinance banking operations.
+It connects the bank's customers, staff, departments, managers, HR, lending operations, customer service, and management intelligence within one controlled platform.
+Unlike a conventional banking application where every user receives essentially the same interface, InfinityCore dynamically adapts the experience according to the user's:
+Identity → Role → Department → Permissions → Responsibilities → Context → Workflow → Intelligence
+A customer sees a digital banking environment.
+A Loan/Credit Officer sees lending and customer workflows.
+A Relationship Manager sees their assigned customers and relationship activities.
+Customer Service staff see customer cases and service requests.
+HR sees recruitment, assessments, interviews, candidates and employee onboarding.
+Managers see approvals, escalations, team workload and operational performance.
+Executives see business intelligence and organizational performance.
+Administrators control the platform, users, permissions, configurations and audit environment.
+The objective is simple:
+Give the right person the right information, at the right time, with the right action, inside the right workflow.
+✨ Product Vision
+InfinityCore is built around a simple operating principle:
+CUSTOMER
+    ↓
+DATA
+    ↓
+WORKFLOW
+    ↓
+RESPONSIBLE TEAM
+    ↓
+ACTION
+    ↓
+DECISION
+    ↓
+VERIFICATION
+    ↓
+AUDIT
+    ↓
+INTELLIGENCE
+The platform does not simply store information.
+It should understand:
+Who is using the system
+What they are responsible for
+What information they are authorized to access
+What work requires their attention
+What is blocking a process
+What action should happen next
+What can be automated
+What requires human judgement
+What management needs to know
+🧠 Core Philosophy
+InfinityCore is designed around:
+Event → Context → Decision → Action → Verification → Audit
+For example:
+A customer submits a loan application.
+InfinityCore:
+Receives the application.
+Checks the customer's available information.
+Determines whether required information/documents are present.
+Creates the appropriate workflow.
+Routes the work to the appropriate authorized officer.
+Highlights missing requirements.
+Provides AI-assisted insights where appropriate.
+Escalates when required.
+Records every important action.
+Updates the customer's experience.
+The objective is to eliminate unnecessary manual movement of information between departments.
+👥 Role-Aware Experiences
+InfinityCore is not one dashboard with buttons hidden according to role.
+It is a shared platform with different experiences.
+Customer
+Customers experience InfinityCore as their digital banking environment.
+They can access authorized features such as:
+Account overview
+Available funds
+Transactions
+Transfers
+Payments
+Beneficiaries
+Savings
+Loans
+Loan applications
+Repayment schedules
+KYC
+Personal profile
+Document uploads
+Notifications
+Customer support
+Service requests
+Customers only see their own authorized financial and personal information.
+Customer Service Officer
+Customer Service staff receive an operational workspace focused on resolving customer needs.
+Capabilities can include:
+Customer search
+Customer 360
+Customer verification
+Service requests
+Complaints
+Case management
+Document requests
+Customer interaction history
+Escalations
+Follow-ups
+A staff member assisting a customer can open the customer's authorized profile and handle the relevant issue without switching between disconnected systems.
+Relationship Manager
+Relationship Managers receive a dedicated customer relationship workspace.
+They can manage:
+Assigned customers
+Customer interactions
+Follow-ups
+Customer requests
+Active loans
+Repayment information
+Relationship activities
+Customer health indicators
+Outstanding actions
+InfinityCore should proactively surface customers requiring attention.
+Loan / Credit Officer
+Loan and credit teams receive a lending operations workspace.
+Capabilities include:
+Loan applications
+Customer profiles
+Customer 360
+KYC verification
+Document verification
+Credit assessment
+Loan pipeline
+Approval workflows
+Disbursement status
+Repayment monitoring
+Overdue accounts
+Customer issues
+Loan lifecycle
+APPLICATION
+     ↓
+KYC
+     ↓
+DOCUMENTATION
+     ↓
+ASSESSMENT
+     ↓
+REVIEW
+     ↓
+APPROVAL
+     ↓
+DISBURSEMENT
+     ↓
+REPAYMENT
+     ↓
+MONITORING
+     ↓
+COMPLETION
+Each stage should identify:
+Current status
+Responsible person
+Required action
+SLA
+Documents
+Notes
+History
+Audit trail
+🏦 Customer 360
+Authorized staff can access a contextual Customer 360 workspace.
+Depending on their permissions, this may include:
+Customer identity
+KYC status
+Account information
+Loans
+Repayment history
+Documents
+Open cases
+Service requests
+Interaction history
+Workflow history
+Notes
+Relevant alerts
+The objective is to allow an authorized employee to understand the customer's situation without searching through multiple disconnected systems.
+🎯 Customer Walk-In / Staff-Assisted Banking
+InfinityCore supports a staff-assisted customer experience.
+A customer can walk into a branch with an issue.
+An authorized staff member can:
+Find the customer.
+Verify their identity.
+Open Customer 360.
+Understand the issue.
+Create or continue a service case.
+Perform authorized actions.
+Upload or request documents.
+Escalate where necessary.
+Resolve the issue.
+Maintain an auditable interaction history.
+Example
+Customer issue:
+Loan repayment made but not reflected.
+InfinityCore can surface:
+Relevant loan
+Recent repayment
+Transaction status
+Outstanding balance
+Repayment schedule
+Previous interactions
+Existing cases
+And suggest:
+Recommended next action: Verify payment transaction.
+👨‍💼 Staff Workspace — My Work
+Every operational staff member should have a personalized:
+My Work
+Instead of forcing employees to search through modules, InfinityCore proactively presents the work requiring attention.
+Examples:
+Loan Officer
+7 applications awaiting action
+3 assessments
+2 overdue follow-ups
+1 SLA warning
+Customer Service Officer
+5 open customer cases
+2 escalations
+3 document requests
+HR Officer
+14 applications
+6 assessments awaiting review
+3 interviews scheduled
+Manager
+4 approvals
+2 escalations
+1 SLA breach
+The platform should answer:
+"What do I need to do next?"
+👨‍💼 Management Workspace
+Managers receive an approval and operational decision-making environment.
+Managers can monitor:
+Pending approvals
+Team workload
+Customer cases
+Loan pipeline
+Escalations
+SLA performance
+Branch performance
+Process bottlenecks
+Staff workload
+Operational exceptions
+The manager experience should prioritize:
+Attention → Insight → Action
+📊 Executive Command Center
+Executives receive a high-level business intelligence experience.
+Possible metrics include:
+Customer growth
+Active customers
+Loan portfolio
+Outstanding exposure
+Repayment performance
+Overdue loans
+Customer complaints
+SLA performance
+Branch performance
+Staff productivity
+Recruitment pipeline
+Operational bottlenecks
+Workflow performance
+Automation impact
+The executive dashboard should avoid unnecessary operational detail.
+It should answer:
+What is happening?
+Why is it happening?
+What requires attention?
+🤖 Infinity Intelligence
+InfinityCore includes an AI-assisted intelligence layer called:
+Infinity Intelligence
+Infinity Intelligence is not designed as a generic chatbot.
+It should be context-aware and permission-aware.
+Examples:
+Customer
+"When is my next loan repayment?"
+Loan Officer
+"Which applications require my attention today?"
+Customer Service
+"Show me unresolved customer cases approaching their SLA."
+HR
+"Show the strongest candidates for the Operations Manager role."
+Manager
+"What is currently causing the most operational delay?"
+Executive
+"Why has loan processing time increased this month?"
+AI responses must respect:
+USER
+ ↓
+ROLE
+ ↓
+PERMISSIONS
+ ↓
+AUTHORIZED DATA
+ ↓
+CONTEXT
+ ↓
+RESPONSE
+AI must never bypass application authorization.
+🧑‍💼 HR & Recruitment
+HR is a first-class business function within InfinityCore.
+HR can manage:
+Job requisitions
+Job creation
+Job publishing
+Applications
+Candidate database
+CVs
+AI-assisted screening
+Candidate ranking
+Assessment tests
+Question banks
+Candidate scoring
+Interviews
+Interview scheduling
+Candidate progression
+Offers
+Employee onboarding
+Employee records
+HR documents
+🤖 AI-Assisted Candidate Screening
+HR can upload and review candidate CVs.
+InfinityCore can assist with extracting:
+Education
+Experience
+Skills
+Certifications
+Relevant employment history
+Role alignment
+The system can generate an AI-assisted match score based on the requirements defined for the role.
+Example:
+CANDIDATE MATCH
+82%
 
-A production-grade banking operations platform with customer management (KYC), a rule-based loan approval engine, workflow automation (leave requests), role-based access control, audit logging, and an admin dashboard.
+Experience       Strong
+Skills           Strong
+Education        Strong
+Certifications   Moderate
+Role Alignment   Strong
 
-This is the **standalone Vite version** — it runs independently of the Base44 platform and uses **Supabase** (Postgres + Auth) as its backend.
+Potential Gap:
+Required experience exceeds candidate's stated experience.
+AI is an assistive decision-support tool, not the final hiring authority.
+Human HR review remains mandatory for consequential hiring decisions.
+📝 Assessment Engine
+HR can create and manage candidate assessments.
+Supported concepts include:
+Multiple choice
+True/False
+Scenario-based questions
+Competency questions
+Timed assessments
+Question banks
+Randomized questions
+Scoring
+Pass thresholds
+Candidate attempts
+Assessment results
+Candidate lifecycle:
+APPLIED
+ ↓
+SCREENING
+ ↓
+ASSESSMENT
+ ↓
+SHORTLISTED
+ ↓
+INTERVIEW
+ ↓
+FINAL REVIEW
+ ↓
+OFFER
+ ↓
+HIRED
+📅 Interview Management
+HR can:
+Schedule interviews
+Assign interviewers
+Define interview stages
+Record feedback
+Score candidates
+Progress candidates
+Reject candidates
+Move candidates to offer
+The recruitment process becomes a workflow rather than a collection of spreadsheets and emails.
+👤 Employee Onboarding
+Once a candidate is hired, InfinityCore can initiate onboarding workflows.
+Example:
+HIRED
+ ↓
+DOCUMENT COLLECTION
+ ↓
+EMPLOYEE PROFILE
+ ↓
+BANK DETAILS
+ ↓
+POLICY ACKNOWLEDGEMENT
+ ↓
+DEPARTMENT ASSIGNMENT
+ ↓
+MANAGER ASSIGNMENT
+ ↓
+SYSTEM ACCESS
+ ↓
+ONBOARDING COMPLETE
+⚙️ Workflow Automation
+InfinityCore uses a reusable workflow architecture:
+EVENT
+ ↓
+CONDITIONS
+ ↓
+ACTION
+ ↓
+NOTIFICATION
+ ↓
+ESCALATION
+ ↓
+AUDIT
+Example:
+Loan Application
+Loan Submitted
+      ↓
+Check KYC
+      ↓
+KYC Complete?
+   ↙       ↘
+ YES        NO
+ ↓           ↓
+Create       Create KYC Task
+Assessment
+🧠 Intelligent Work Routing
+InfinityCore should consider:
+Role
+Department
+Branch
+Permissions
+Current workload
+Availability
+Workflow type
+when recommending task assignments.
+Example:
+Sarah — 4 active cases
+David — 13 active cases
+Recommended assignment: Sarah
+Authorized managers can override recommendations.
+📂 Document Intelligence
+Documents remain connected to the workflow that requires them.
+Supported actions include:
+Upload
+Preview
+Verify
+Reject
+Replace
+Request replacement
+Categorize
+Track status
+Audit access
+Documents should use secure authenticated storage.
+Sensitive documents must never be exposed through public URLs.
+🎫 Customer Case Management
+Customer issues become structured workflows.
+Cases can originate from:
+Customers
+Customer Service
+Relationship Managers
+Loan Officers
+Branches
+Management
+Lifecycle:
+OPEN
+ ↓
+ASSIGNED
+ ↓
+IN PROGRESS
+ ↓
+WAITING
+ ↓
+RESOLVED
+ ↓
+CLOSED
+Cases include:
+Customer
+Category
+Priority
+Assigned department
+Assigned employee
+SLA
+Notes
+Attachments
+Timeline
+Resolution
+Audit history
+🔔 Notification Engine
+Notifications are role-aware.
+Customers
+Transaction alerts
+Loan reminders
+Repayment notifications
+Service updates
+KYC notifications
+Staff
+Task assignments
+Customer cases
+Approvals
+Document requests
+SLA warnings
+HR
+New applications
+Assessment completion
+Interview events
+Managers
+Approval requests
+Escalations
+SLA breaches
+Team alerts
+🔐 Role-Based Access Control
+InfinityCore uses role-based and permission-based access.
+Example roles include:
+Role
+Primary Experience
+Customer
+Digital Banking
+Customer Service
+Customer Support
+Relationship Manager
+Customer Relationships
+Loan/Credit Officer
+Lending Operations
+HR Officer
+Recruitment & Workforce
+Manager
+Approvals & Operations
+Executive
+Business Intelligence
+Admin
+Platform Administration
+Super Admin
+System Governance
+Permissions should be granular.
+Examples:
+customers.read
+customers.update
+customers.support
 
-> 💾 The Base44 admin dashboard has a **"Download Vite Build"** button that packages this entire `vite-app/` folder as a downloadable ZIP.
+loans.read
+loans.create
+loans.assess
+loans.approve
 
----
+documents.upload
+documents.verify
 
-## ✨ Features
+hr.jobs.create
+hr.applications.read
+hr.assessments.create
+hr.interviews.schedule
 
-- **Customer Management** — KYC-ready fields (national ID, DOB, employment, income, credit score)
-- **Loan Engine** — rule-based risk scoring → auto-approve / manager review / senior review
-- **Status lifecycle** — Pending → Approved → Disbursed → Repaid
-- **Workflow Engine** — leave requests with multi-level approval (≤3 days → manager, >3 days → senior/admin)
-- **Role-Based Access Control** — Admin, Manager, Staff
-- **Audit Logging** — every critical action is recorded
-- **Email Notifications** — loan & leave decisions are emailed to the submitter (registered users)
-- **Superadmin Auto-Promotion** — `tamunosikiiwolomaclinton@gmail.com` is auto-promoted to `admin` on signup/login
-- **InfinityCore Branding** — custom logo across the sidebar, login, and auth screens
-- **Configuration Failsafe** — missing Supabase env vars show an error screen instead of a blank UI
-- **Admin Dashboard** — analytics, charts, user management
-- **Mobile responsive** banking UI
+reports.view
+reports.export
 
----
-
-## 🚀 Quick Start (5 steps)
-
-### 1. Install Node.js
-Download and install **Node.js 18 or higher** from <https://nodejs.org>.
-Verify it installed:
-```bash
-node --version   # should print v18.x or higher
-npm --version
-```
-
-### 2. Install dependencies
-From inside the `vite-app` folder:
-```bash
-cd vite-app
-npm install
-```
-
-### 3. Add your Supabase keys
-1. Create a free project at <https://supabase.com>.
-2. Go to **Project Settings → API** and copy:
-   - `Project URL`
-   - `anon` public key
-3. Copy the example env file and fill in your values:
-```bash
-cp .env.example .env
-```
-Open `.env` and paste your keys:
-```bash
-VITE_SUPABASE_URL=https://your-project-ref.supabase.co
-VITE_SUPABASE_ANON_KEY=your-anon-public-key
-```
-
-### 4. Create the database tables
-Open your Supabase project → **SQL Editor → New query**, paste the SQL from
-[`schema.sql`](./schema.sql) (also included at the bottom of this README),
-and click **Run**. This creates all tables, the `profiles` table, RLS policies,
-and triggers.
-
-### 5. Run the app
-```bash
-npm run dev
-```
-Open <http://localhost:5173> in your browser. Sign up with any email/password —
-new users get the `staff` role by default. The email
-`tamunosikiiwolomaclinton@gmail.com` is auto-promoted to `admin` on signup/login.
-For other accounts, promote yourself to `admin` in the `profiles` table
-(Supabase dashboard → Table Editor) to access all features.
-
----
-
-## 📁 Folder Structure
-
-```
+users.manage
+settings.manage
+Authorization must be enforced at the backend/database level and not merely by hiding UI elements.
+🛡️ Security & Audit
+InfinityCore is designed around controlled access and accountability.
+Important actions should record:
+WHO
+WHAT
+WHEN
+RECORD
+OLD STATE
+NEW STATE
+Example:
+CLINTON IWOLAMA
+Assigned Loan Application LN-00082
+13 Aug 2026 — 14:32
+Credit Queue → Sarah Ade
+Audit records should not be editable by ordinary users.
+🗄️ Technology Stack
+InfinityCore's standalone application uses:
+Vite
+React
+Supabase
+PostgreSQL
+Supabase Auth
+Supabase Row Level Security
+Tailwind CSS
+JavaScript/JSX
+The application is designed to operate independently of Base44.
+📁 Project Structure
 vite-app/
-├── index.html              # HTML entry point
-├── package.json            # Dependencies & scripts
-├── vite.config.js          # Vite configuration
-├── tailwind.config.js      # Tailwind CSS config
-├── postcss.config.js       # PostCSS config (Tailwind + autoprefixer)
-├── .env.example            # Template for environment variables
-├── .env                    # Your real keys (NOT committed to git)
+├── index.html
+├── package.json
+├── vite.config.js
+├── tailwind.config.js
+├── postcss.config.js
+├── .env.example
 ├── public/
 │   └── favicon.svg
 └── src/
-    ├── main.jsx            # React entry point
-    ├── App.jsx             # Router + auth gate (role-based routes)
-    ├── index.css           # Tailwind directives + base styles
-    ├── supabaseClient.js   # Supabase client (reads env vars)
+    ├── main.jsx
+    ├── App.jsx
+    ├── index.css
+    ├── supabaseClient.js
+    │
     ├── components/
-    │   └── Layout.jsx      # Sidebar navigation + topbar shell
+    │   ├── Layout.jsx
+    │   ├── Customer360.jsx
+    │   ├── SmartModal.jsx
+    │   ├── WorkflowTimeline.jsx
+    │   ├── DocumentUpload.jsx
+    │   ├── NotificationCenter.jsx
+    │   └── ...
+    │
     ├── pages/
     │   ├── Login.jsx
-    │   ├── Dashboard.jsx
-    │   ├── Customers.jsx
-    │   ├── Loans.jsx
-    │   ├── Repayments.jsx
-    │   ├── LeaveRequests.jsx
-    │   ├── AuditLogs.jsx
-    │   └── Users.jsx
+    │   │
+    │   ├── customer/
+    │   ├── staff/
+    │   ├── loans/
+    │   ├── customer-service/
+    │   ├── relationship/
+    │   ├── hr/
+    │   ├── management/
+    │   ├── executive/
+    │   └── admin/
+    │
     ├── services/
-    │   └── supabaseService.js   # Generic CRUD factory + audit helper
+    │   ├── supabaseService.js
+    │   ├── workflowService.js
+    │   ├── notificationService.js
+    │   └── ...
+    │
     ├── hooks/
-    │   └── useAuth.js          # Supabase auth + role state
+    │   ├── useAuth.js
+    │   ├── usePermissions.js
+    │   └── ...
+    │
     └── lib/
-        ├── loanScoring.js      # Rule-based risk scoring engine
-        └── utils.jsx          # Formatters + StatusBadge component
-```
-
----
-
-## 🔌 Connecting Supabase
-
-All data and authentication flow through a single Supabase client created in
-[`src/supabaseClient.js`](./src/supabaseClient.js):
-
-```js
-import { createClient } from '@supabase/supabase-js'
-
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
-```
-
-- **Auth**: Supabase Auth issues a JWT on sign-in; the session is persisted
-  automatically. The `useAuth` hook reads the current user and their role from
-  the `profiles` table.
-- **Data**: Each entity is accessed through a generic service factory in
-  `src/services/supabaseService.js` (list / create / update / delete).
-- **Security**: Row-Level Security policies on every table enforce that users
-  only see/edit what their role allows (see the SQL schema below).
-
-### Environment variables
-| Variable | Where to find it | Used for |
-|---|---|---|
-| `VITE_SUPABASE_URL` | Supabase dashboard → Settings → API | Client connection |
-| `VITE_SUPABASE_ANON_KEY` | Supabase dashboard → Settings → API | Anonymous auth (safe for the browser) |
-
-> ⚠️ Never commit your `.env` file. It is already in `.gitignore`.
-
----
-
-## 🗄️ Database Schema (run this in Supabase SQL Editor)
-
-```sql
--- 1. PROFILES (joins to auth.users, holds the role)
-create table if not exists public.profiles (
-  id uuid primary key references auth.users(id) on delete cascade,
-  email text,
-  full_name text,
-  role text not null default 'staff' check (role in ('admin','manager','staff')),
-  created_at timestamptz default now()
-);
-
--- 2. CUSTOMERS
-create table if not exists public.customers (
-  id uuid primary key default gen_random_uuid(),
-  name text not null,
-  email text,
-  phone text,
-  address text,
-  date_of_birth date,
-  national_id text,
-  account_number text,
-  employment_status text default 'employed',
-  employer text,
-  monthly_income numeric default 0,
-  credit_score numeric default 0,
-  status text default 'pending',
-  notes text,
-  created_by uuid references auth.users(id),
-  created_at timestamptz default now()
-);
-
--- 3. LOAN APPLICATIONS
-create table if not exists public.loan_applications (
-  id uuid primary key default gen_random_uuid(),
-  customer_id uuid references public.customers(id),
-  customer_name text,
-  amount numeric not null,
-  purpose text,
-  term_months int not null,
-  interest_rate numeric default 12,
-  employment_status text default 'employed',
-  monthly_income numeric default 0,
-  monthly_expenses numeric default 0,
-  existing_debt numeric default 0,
-  repayment_history_score numeric default 50,
-  risk_score numeric,
-  risk_level text,
-  approval_route text,
-  status text default 'pending',
-  reviewed_by_name text,
-  reviewed_date timestamptz,
-  approval_comments text,
-  disbursed_date date,
-  created_by uuid references auth.users(id),
-  created_at timestamptz default now()
-);
-
--- 4. LOANS (disbursed loans)
-create table if not exists public.loans (
-  id uuid primary key default gen_random_uuid(),
-  application_id uuid,
-  customer_id uuid,
-  customer_name text,
-  principal_amount numeric,
-  outstanding_balance numeric,
-  interest_rate numeric,
-  term_months int,
-  monthly_payment numeric,
-  status text default 'active',
-  disbursed_date date,
-  maturity_date date,
-  created_at timestamptz default now()
-);
-
--- 5. REPAYMENTS
-create table if not exists public.repayments (
-  id uuid primary key default gen_random_uuid(),
-  loan_id uuid,
-  customer_id uuid,
-  customer_name text,
-  amount numeric not null,
-  due_date date,
-  payment_date date,
-  status text default 'pending',
-  payment_method text,
-  created_at timestamptz default now()
-);
-
--- 6. LEAVE REQUESTS (workflow engine)
-create table if not exists public.leave_requests (
-  id uuid primary key default gen_random_uuid(),
-  employee_name text,
-  leave_type text default 'annual',
-  start_date date,
-  end_date date,
-  days int,
-  reason text,
-  status text default 'pending',
-  approval_level int default 1,
-  approved_by_name text,
-  approved_date timestamptz,
-  approval_comments text,
-  created_by uuid references auth.users(id),
-  created_at timestamptz default now()
-);
-
--- 7. AUDIT LOGS
-create table if not exists public.audit_logs (
-  id uuid primary key default gen_random_uuid(),
-  action text not null,
-  entity_type text,
-  entity_id text,
-  user_name text,
-  details text,
-  severity text default 'info',
-  created_at timestamptz default now()
-);
-
--- 8. NOTIFICATIONS
-create table if not exists public.notifications (
-  id uuid primary key default gen_random_uuid(),
-  user_id uuid references auth.users(id),
-  title text not null,
-  message text,
-  type text default 'system',
-  read boolean default false,
-  link text,
-  created_at timestamptz default now()
-);
-
--- Auto-create a profile row when a new auth user signs up
-create or replace function public.handle_new_user()
-returns trigger language plpgsql security definer set search_path = public as $$
-begin
-  insert into public.profiles (id, email, full_name)
-  values (new.id, new.email, coalesce(new.raw_user_meta_data->>'full_name', ''));
-  return new;
-end; $$;
-
-drop trigger if exists on_auth_user_created on auth.users;
-create trigger on_auth_user_created
-  after insert on auth.users
-  for each row execute function public.handle_new_user();
-
--- Enable Row-Level Security
-alter table public.profiles        enable row level security;
-alter table public.customers       enable row level security;
-alter table public.loan_applications enable row level security;
-alter table public.loans           enable row level security;
-alter table public.repayments      enable row level security;
-alter table public.leave_requests  enable row level security;
-alter table public.audit_logs      enable row level security;
-alter table public.notifications  enable row level security;
-
--- Helper: current user's role
-create or replace function public.current_role()
-returns text language sql stable as $$
-  select coalesce((select role from public.profiles where id = auth.uid()), 'staff');
-$$;
-
--- PROFILES policies
-create policy "profiles read own or admin" on public.profiles
-  for select using (auth.uid() = id or public.current_role() = 'admin');
-create policy "profiles update own or admin" on public.profiles
-  for update using (auth.uid() = id or public.current_role() = 'admin');
-
--- CUSTOMERS — all authenticated staff read; managers/admins write
-create policy "customers read" on public.customers
-  for select using (auth.role() = 'authenticated');
-create policy "customers insert" on public.customers
-  for insert with check (auth.role() = 'authenticated');
-create policy "customers update" on public.customers
-  for update using (public.current_role() in ('admin','manager'));
-create policy "customers delete" on public.customers
-  for delete using (public.current_role() = 'admin');
-
--- LOAN APPLICATIONS — staff submit; managers/admins approve
-create policy "loan_apps read" on public.loan_applications
-  for select using (auth.role() = 'authenticated');
-create policy "loan_apps insert" on public.loan_applications
-  for insert with check (auth.role() = 'authenticated');
-create policy "loan_apps update" on public.loan_applications
-  for update using (created_by = auth.uid() or public.current_role() in ('admin','manager'));
-create policy "loan_apps delete" on public.loan_applications
-  for delete using (public.current_role() = 'admin');
-
--- LOANS — managers/admins manage
-create policy "loans read" on public.loans
-  for select using (auth.role() = 'authenticated');
-create policy "loans write" on public.loans
-  for all using (public.current_role() in ('admin','manager'))
-  with check (public.current_role() in ('admin','manager'));
-
--- REPAYMENTS — managers/admins manage
-create policy "repayments read" on public.repayments
-  for select using (auth.role() = 'authenticated');
-create policy "repayments write" on public.repayments
-  for all using (public.current_role() in ('admin','manager'))
-  with check (public.current_role() in ('admin','manager'));
-
--- LEAVE REQUESTS — own or manager/admin
-create policy "leave read" on public.leave_requests
-  for select using (created_by = auth.uid() or public.current_role() in ('admin','manager'));
-create policy "leave insert" on public.leave_requests
-  for insert with check (auth.role() = 'authenticated');
-create policy "leave update" on public.leave_requests
-  for update using (created_by = auth.uid() or public.current_role() in ('admin','manager'));
-create policy "leave delete" on public.leave_requests
-  for delete using (public.current_role() = 'admin');
-
--- AUDIT LOGS — admin only
-create policy "audit read" on public.audit_logs
-  for select using (public.current_role() = 'admin');
-create policy "audit insert" on public.audit_logs
-  for insert with check (auth.role() = 'authenticated');
-
--- NOTIFICATIONS — owner only
-create policy "notif read"   on public.notifications for select using (user_id = auth.uid());
-create policy "notif insert" on public.notifications for insert with check (auth.role() = 'authenticated');
-create policy "notif update" on public.notifications for update using (user_id = auth.uid());
-create policy "notif delete" on public.notifications for delete using (user_id = auth.uid());
-```
-
----
-
-## 🛡️ Loan Risk Scoring Engine
-
-The scoring logic lives in [`src/lib/loanScoring.js`](./src/lib/loanScoring.js)
-and is identical to the Base44 version. It weights three factors:
-
-| Factor | Weight |
-|---|---|
-| Income-to-loan affordability (disposable income ÷ monthly payment) | 45% |
-| Employment status | 25% |
-| Repayment history score | 30% |
-
-The composite score (0–100) maps to a risk level and approval route:
-
-| Score | Risk | Route |
-|---|---|---|
-| ≥ 75 | **Low** | Auto-approve |
-| 50–74 | **Medium** | Manager approval |
-| < 50 | **High** | Senior (admin) review |
-
----
-
-## 👤 Roles & Permissions
-
-| Capability | Staff | Manager | Admin |
-|---|:---:|:---:|:---:|
-| View dashboard & customers | ✅ | ✅ | ✅ |
-| Submit loan / leave requests | ✅ | ✅ | ✅ |
-| Approve medium-risk loans | ❌ | ✅ | ✅ |
-| Approve high-risk loans / >3-day leave | ❌ | ❌ | ✅ |
-| Disburse loans & record repayments | ❌ | ✅ | ✅ |
-| Manage users & roles | ❌ | ❌ | ✅ |
-| View audit logs | ❌ | ❌ | ✅ |
-
----
-
-## ☁️ Deployment
-
-### Vercel
-1. Push this `vite-app` folder to a GitHub repository.
-2. In Vercel → **New Project** → import the repo.
-3. Set the **Root Directory** to `vite-app`.
-4. Framework preset: **Vite** (auto-detected). Build: `npm run build`, output: `dist`.
-5. Add environment variables: `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`.
-6. Deploy.
-
-### Netlify
-1. Push to GitHub.
-2. Netlify → **Add new site** → import the repo. Base directory: `vite-app`.
-3. Build command: `npm run build`. Publish directory: `dist`.
-4. Add the same environment variables under **Site settings → Environment variables**.
-5. Deploy.
-
-> In Supabase → **Authentication → URL Configuration**, add your deployed URL
-> to the **Site URL** and redirect allow-list so auth redirects work in production.
-
----
-
-## 🛠️ Troubleshooting
-
-**`Missing Supabase env vars` warning in the console**
-→ You haven't created `.env` or the values are empty. Copy `.env.example` to
-`.env` and fill in your real keys, then restart `npm run dev`.
-
-**Blank page / "Invalid API key"**
-→ Double-check the anon key is the **public/anon** key, not the service_role
-key. The service_role key bypasses RLS and must never be in the browser.
-
-**Can't see all menu items / "Access denied"**
-→ Your user has the default `staff` role. In the Supabase dashboard →
-**Table Editor → profiles**, change your row's `role` to `admin` and refresh.
-
-**Sign-up works but login fails**
-→ Supabase may require email confirmation. Either confirm via the email, or
-disable "Confirm email" under **Authentication → Providers → Email** for local
-testing.
-
-**RLS blocks everything (empty tables even as admin)**
-→ Make sure you ran the full SQL block including the `create policy` statements
-and that your profile row exists with `role = 'admin'`.
-
-**Changes not showing after editing `.env`**
-→ Vite only reads env vars at startup. Stop the dev server (`Ctrl+C`) and run
-`npm run dev` again.
-
-**Port 5173 already in use**
-→ Run `npm run dev -- --port 3000` to use another port.
-
----
-
-## 📜 Scripts
-
-| Command | Description |
-|---|---|
-| `npm run dev` | Start the local dev server |
-| `npm run build` | Production build to `dist/` |
-| `npm run preview` | Preview the production build locally |
-
----
-
-## 📄 License
-
-Internal project for Infinity Bank. All rights reserved.
+        ├── loanScoring.js
+        ├── workflowEngine.js
+        ├── ai/
+        └── utils.jsx
+The exact structure may evolve as the application develops.
+🚀 Quick Start
+1. Install Node.js
+Node.js 18+ is recommended.
+Verify:
+node --version
+npm --version
+2. Install dependencies
+From the application directory:
+npm install
+3. Configure Supabase
+Create a Supabase project.
+Obtain:
+Project URL
+Public anon key
+Create:
+.env
+from:
+.env.example
+Example:
+VITE_SUPABASE_URL=https://your-project-ref.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-public-key
+Important
+Never expose:
+SUPABASE_SERVICE_ROLE_KEY
+or other server-side secrets in the Vite frontend.
+🗄️ Database
+The Supabase database should contain the entities required by the application's current feature set.
+Core domains include:
+Authentication
+Profiles
+Roles
+Permissions
+Customers
+Accounts
+Transactions
+Loans
+Loan Applications
+Repayments
+Customer Cases
+Documents
+Workflows
+Workflow Tasks
+Notifications
+Employees
+Departments
+Branches
+Jobs
+Candidates
+Assessments
+Assessment Questions
+Interviews
+Audit Logs
+Database architecture should evolve with the product.
+Where RLS is enabled, policies must be designed around the actual role and permission model rather than simply granting every authenticated user access to every record.
+🔒 Data Security
+InfinityCore follows a security-first architecture.
+Principles include:
+Least-privilege access
+Role-aware access
+Permission-aware workflows
+Supabase Row Level Security
+Secure document storage
+Authenticated document access
+Audit logging
+Input validation
+Database constraints
+Protected secrets
+Human oversight for consequential AI-assisted decisions
+🤖 AI Safety & Governance
+AI features are designed to assist, not silently replace, responsible human decision-making.
+AI may:
+Summarize
+Classify
+Prioritize
+Recommend
+Extract
+Detect anomalies
+Identify missing information
+Assist with candidate screening
+Generate operational insights
+Human approval remains required for consequential decisions such as:
+Loan approval
+Hiring
+Financial exceptions
+Account restrictions
+Other high-impact decisions
+AI outputs should be clearly identified as AI-assisted where appropriate.
+📊 Business Intelligence
+InfinityCore transforms operational data into management intelligence.
+Possible insights include:
+Customer
+Customer growth
+Customer activity
+Customer service cases
+Customer journey completion
+Lending
+Loan pipeline
+Processing time
+Approval rate
+Repayment performance
+Outstanding exposure
+Overdue accounts
+Operations
+SLA performance
+Workflow bottlenecks
+Staff workload
+Case resolution time
+Process turnaround time
+HR
+Recruitment pipeline
+Candidate conversion
+Assessment performance
+Interview pipeline
+Hiring turnaround
+The objective is not to create charts for decoration.
+Every visualization should answer a business question.
+💡 Process Intelligence
+InfinityCore should continuously expose operational bottlenecks.
+Example:
+Loan processing time increased by 17%.
+Possible explanation:
+61% of current delays occur during document verification.
+Recommended action:
+Review document verification workload and reassignment rules.
+This creates a feedback loop:
+OPERATIONS
+ ↓
+DATA
+ ↓
+INSIGHT
+ ↓
+ACTION
+ ↓
+IMPROVEMENT
+🧩 Design Philosophy
+InfinityCore should feel:
+Modern
+Premium
+Trustworthy
+Fast
+Intelligent
+Professional
+Financial
+Human-centered
+But the most important design principle is:
+The interface should adapt to the user's job.
+Customer
+Simple and financial.
+Staff
+Operational and action-oriented.
+Manager
+Decision-oriented.
+HR
+Recruitment and workforce-oriented.
+Executive
+Intelligence-oriented.
+Admin
+Control-oriented.
+📱 Responsive Experience
+InfinityCore is designed to support responsive experiences across:
+Desktop
+Tablet
+Mobile
+Customers should have a particularly streamlined mobile experience for everyday banking.
+Operational staff may have richer desktop workflows where appropriate.
+☁️ Deployment
+InfinityCore can be deployed using platforms such as:
+Vercel
+npm run build
+Build output:
+dist/
+Configure:
+VITE_SUPABASE_URL
+VITE_SUPABASE_ANON_KEY
+in the deployment environment.
+The same principles apply to Netlify or another Vite-compatible hosting provider.
+Before production deployment:
+Configure Supabase authentication URLs.
+Review RLS policies.
+Review storage policies.
+Remove demo data.
+Verify environment variables.
+Test role isolation.
+Test customer data isolation.
+Test document access.
+Test audit logging.
+Test critical workflows.
+🛠️ Development Commands
+Command
+Purpose
+npm run dev
+Start development server
+npm run build
+Create production build
+npm run preview
+Preview production build
+🧪 MVP Demonstration Flow
+The intended InfinityCore demonstration can follow this scenario:
+1. Customer
+A customer signs in.
+They:
+View funds
+Review transactions
+Complete KYC
+Upload documents
+Apply for a loan
+2. Loan Officer
+The Loan Officer signs in.
+InfinityCore displays:
+My Work
+The new loan application appears automatically.
+The officer opens:
+Customer 360
+The system highlights missing information and presents relevant loan context.
+3. Customer
+The customer uploads the missing document.
+4. Loan Officer
+The officer verifies the document.
+The workflow moves forward.
+5. Manager
+The manager receives an approval task.
+The manager reviews the relevant information and makes the decision.
+6. Customer
+The customer receives the appropriate status update.
+7. HR
+Separately, HR creates a job.
+Candidates apply.
+CVs are uploaded.
+Infinity Intelligence assists HR with candidate screening.
+Candidates complete assessment tests.
+Interviews are scheduled.
+8. Management
+Management opens the command center.
+They can see:
+Customer activity
+Lending performance
+Operational bottlenecks
+Staff workload
+Recruitment activity
+SLA performance
+All of this originates from the same operational platform.
