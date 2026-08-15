@@ -1,6 +1,6 @@
 import React from 'react'
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { useAuth } from './hooks/useAuth'
+import { useAuth, AuthProvider } from './hooks/useAuth'
 import Layout from './components/Layout'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
@@ -35,18 +35,20 @@ function RoleRoute({ children, roles }) {
 
 export default function App() {
   return (
-    <HashRouter>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Protected><Dashboard /></Protected>} />
-        <Route path="/customers" element={<Protected><Customers /></Protected>} />
-        <Route path="/loans" element={<Protected><Loans /></Protected>} />
-        <Route path="/repayments" element={<Protected><Repayments /></Protected>} />
-        <Route path="/leave-requests" element={<Protected><LeaveRequests /></Protected>} />
-        <Route path="/audit-logs" element={<Protected><RoleRoute roles={['super_admin', 'admin']}><AuditLogs /></RoleRoute></Protected>} />
-        <Route path="/users" element={<Protected><RoleRoute roles={['super_admin', 'admin']}><Users /></RoleRoute></Protected>} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </HashRouter>
+    <AuthProvider>
+      <HashRouter>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Protected><Dashboard /></Protected>} />
+          <Route path="/customers" element={<Protected><Customers /></Protected>} />
+          <Route path="/loans" element={<Protected><Loans /></Protected>} />
+          <Route path="/repayments" element={<Protected><Repayments /></Protected>} />
+          <Route path="/leave-requests" element={<Protected><LeaveRequests /></Protected>} />
+          <Route path="/audit-logs" element={<Protected><RoleRoute roles={['super_admin', 'admin']}><AuditLogs /></RoleRoute></Protected>} />
+          <Route path="/users" element={<Protected><RoleRoute roles={['super_admin', 'admin']}><Users /></RoleRoute></Protected>} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </HashRouter>
+    </AuthProvider>
   )
 }
