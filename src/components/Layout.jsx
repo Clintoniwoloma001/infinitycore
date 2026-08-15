@@ -7,13 +7,13 @@ import { useAuth } from '../hooks/useAuth'
 import Logo from './Logo'
 
 const NAV = [
-  { label: 'Dashboard', path: '/', icon: LayoutDashboard, roles: ['admin', 'manager', 'staff'] },
-  { label: 'Customers', path: '/customers', icon: Users, roles: ['admin', 'manager', 'staff'] },
-  { label: 'Loans', path: '/loans', icon: Landmark, roles: ['admin', 'manager', 'staff'] },
-  { label: 'Repayments', path: '/repayments', icon: Wallet, roles: ['admin', 'manager', 'staff'] },
-  { label: 'Leave Requests', path: '/leave-requests', icon: CalendarDays, roles: ['admin', 'manager', 'staff'] },
-  { label: 'Audit Logs', path: '/audit-logs', icon: ScrollText, roles: ['admin'] },
-  { label: 'User Management', path: '/users', icon: UserCog, roles: ['admin'] },
+  { label: 'Dashboard', path: '/', icon: LayoutDashboard, roles: ['super_admin', 'admin', 'branch_manager', 'operations_manager', 'loan_officer', 'relationship_manager', 'customer_service', 'hr_manager', 'hr_officer', 'staff'] },
+  { label: 'Customers', path: '/customers', icon: Users, roles: ['super_admin', 'admin', 'branch_manager', 'operations_manager', 'loan_officer', 'relationship_manager', 'customer_service', 'staff'] },
+  { label: 'Loans', path: '/loans', icon: Landmark, roles: ['super_admin', 'admin', 'branch_manager', 'operations_manager', 'loan_officer', 'relationship_manager', 'staff'] },
+  { label: 'Repayments', path: '/repayments', icon: Wallet, roles: ['super_admin', 'admin', 'branch_manager', 'operations_manager', 'loan_officer', 'staff'] },
+  { label: 'Leave Requests', path: '/leave-requests', icon: CalendarDays, roles: ['super_admin', 'admin', 'branch_manager', 'operations_manager', 'staff'] },
+  { label: 'Audit Logs', path: '/audit-logs', icon: ScrollText, roles: ['super_admin', 'admin'] },
+  { label: 'User Management', path: '/users', icon: UserCog, roles: ['super_admin', 'admin'] },
 ]
 
 export default function Layout({ children }) {
