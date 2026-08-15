@@ -55,6 +55,7 @@ export default function Dashboard() {
     <div>
       <div className="mb-6">
         <h2 className="text-2xl font-semibold text-slate-900">Welcome, {name.split(' ')[0]}</h2>
+        <RoleSwitcher />
         <p className="text-sm text-slate-500 mt-1">Infinity Bank operations overview</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
