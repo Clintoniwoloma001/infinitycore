@@ -1,12 +1,10 @@
-import { useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 import { supabase } from '../supabaseClient'
 import { ROLES, ROLE_METADATA, ROLE_MODULES, ROLE_PERMISSIONS } from '../constants/roles'
 
-/**
- * Enhanced Auth Hook with role switching for Super Admin
- * Provides authentication state, role information, and permissions
- */
-export function useAuth() {
+const AuthContext = createContext(null)
+
+export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)
   const [profile, setProfile] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -80,32 +78,17 @@ export function useAuth() {
     setViewingAsRole(null)
   }
 
-  // Get the effective role (actual or viewing-as)
   const actualRole = profile?.role || ROLES.STAFF
   const effectiveRole = viewingAsRole || actualRole
-
-  // Check if user can switch views (Super Admin only)
   const canSwitchViews = actualRole === ROLES.SUPER_ADMIN
-
-  // Get metadata for effective role
   const roleMetadata = ROLE_METADATA[effectiveRole] || ROLE_METADATA[ROLES.STAFF]
-
-  // Get available modules for effective role
   const availableModules = ROLE_MODULES[effectiveRole] || []
-
-  // Get permissions for effective role
   const userPermissions = ROLE_PERMISSIONS[effectiveRole] || []
 
-  // Helper function to check single permission
   const hasPermission = (permissionKey) => userPermissions.includes(permissionKey)
-
-  // Helper function to check multiple permissions (any)
   const hasAnyPermission = (permissions) => permissions.some((p) => userPermissions.includes(p))
-
-  // Helper function to check multiple permissions (all)
   const hasAllPermissions = (permissions) => permissions.every((p) => userPermissions.includes(p))
 
-  // Convenience checks for common permissions
   const permissions = {
     canReadCustomers: hasPermission('customers.read'),
     canCreateCustomers: hasPermission('customers.create'),
@@ -139,8 +122,7 @@ export function useAuth() {
     canManageConfig: hasPermission('admin.manage_config'),
   }
 
-  return {
-    // Auth state
+  const value = {
     user,
     profile,
     loading,
@@ -149,18 +131,15 @@ export function useAuth() {
     signUp,
     signOut,
 
-    // Role information
     actualRole,
     effectiveRole,
-    role: effectiveRole, // Alias for backward compatibility
+    role: effectiveRole,
     roleMetadata,
 
-    // Role switching (Super Admin feature)
     viewingAsRole,
     setViewingAsRole,
     canSwitchViews,
 
-    // Modules and permissions
     availableModules,
     userPermissions,
     hasPermission,
@@ -168,7 +147,6 @@ export function useAuth() {
     hasAllPermissions,
     permissions,
 
-    // User info
     name: profile?.full_name || user?.email || 'User',
     email: user?.email,
     isAdmin: actualRole === ROLES.ADMIN || actualRole === ROLES.SUPER_ADMIN,
@@ -177,4 +155,12 @@ export function useAuth() {
     isCustomer: actualRole === ROLES.CUSTOMER,
     isStaff: actualRole === ROLES.STAFF,
   }
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
+}
+
+export function useAuth() {
+  const ctx = useContext(AuthContext)
+  if (!ctx) throw new Error('useAuth must be used within an AuthProvider')
+  return ctx
 }
