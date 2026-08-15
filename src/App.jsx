@@ -43,8 +43,8 @@ export default function App() {
         <Route path="/loans" element={<Protected><Loans /></Protected>} />
         <Route path="/repayments" element={<Protected><Repayments /></Protected>} />
         <Route path="/leave-requests" element={<Protected><LeaveRequests /></Protected>} />
-        <Route path="/audit-logs" element={<Protected><RoleRoute roles={['admin']}><AuditLogs /></RoleRoute></Protected>} />
-        <Route path="/users" element={<Protected><RoleRoute roles={['admin']}><Users /></RoleRoute></Protected>} />
+        <Route path="/audit-logs" element={<Protected><RoleRoute roles={['super_admin', 'admin']}><AuditLogs /></RoleRoute></Protected>} />
+        <Route path="/users" element={<Protected><RoleRoute roles={['super_admin', 'admin']}><Users /></RoleRoute></Protected>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </HashRouter>
