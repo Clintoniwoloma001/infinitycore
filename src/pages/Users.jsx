@@ -3,8 +3,7 @@ import { supabase } from '../supabaseClient'
 import { logAction } from '../services/supabaseService'
 import { StatusBadge } from '../lib/utils'
 import { useAuth } from '../hooks/useAuth'
-
-const ROLE_META = { admin: { label: 'Admin', color: 'violet' }, manager: { label: 'Manager', color: 'blue' }, staff: { label: 'Staff', color: 'slate' } }
+import { ROLE_METADATA, ROLES } from '../constants/roles'
 
 export default function Users() {
   const [users, setUsers] = useState([])
@@ -39,10 +38,12 @@ export default function Users() {
               {users.map((u) => (
                 <tr key={u.id} className="hover:bg-slate-50">
                   <td className="px-6 py-3 font-medium text-slate-800">{u.email || u.id}</td>
-                  <td className="px-6 py-3"><StatusBadge label={ROLE_META[u.role]?.label || 'Staff'} color={ROLE_META[u.role]?.color || 'slate'} /></td>
+                  <td className="px-6 py-3"><StatusBadge label={ROLE_METADATA[u.role]?.label || u.role || 'Staff'} color={ROLE_METADATA[u.role]?.color || '#6b7280'} /></td>
                   <td className="px-6 py-3 text-right">
                     <select value={u.role || 'staff'} onChange={(e) => changeRole(u, e.target.value)} className="h-9 rounded-md border border-slate-300 px-2 text-sm">
-                      <option value="admin">Admin</option><option value="manager">Manager</option><option value="staff">Staff</option>
+                      {Object.values(ROLES).map((r) => (
+                        <option key={r} value={r}>{ROLE_METADATA[r]?.label || r}</option>
+                      ))}
                     </select>
                   </td>
                 </tr>
