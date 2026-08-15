@@ -58,9 +58,9 @@ const SUPERADMIN_EMAIL = 'tamunosikiiwolomaclinton@gmail.com'
 export async function promoteSuperadmin(email) {
   const e = (email || '').toLowerCase().trim()
   if (e !== SUPERADMIN_EMAIL) return { promoted: false }
-  const { data, error } = await supabase
+const { data, error } = await supabase
     .from('profiles')
-    .update({ role: 'admin' })
+    .update({ role: 'super_admin' })
     .eq('email', e)
     .select()
     .single()
