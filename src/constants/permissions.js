@@ -32,6 +32,9 @@ export const PERMISSIONS = {
   HR_ASSESSMENTS_CREATE: 'hr.assessments.create',
   HR_INTERVIEWS_SCHEDULE: 'hr.interviews.schedule',
   HR_HIRE: 'hr.hire',
+  HR_PAYROLL_READ: 'hr.payroll.read',
+  HR_OFFER_LETTERS_READ: 'hr.offer_letters.read',
+  BRANCHES_READ: 'branches.read',
 
   // Support
   SUPPORT_CREATE: 'support.create',
@@ -42,6 +45,9 @@ export const PERMISSIONS = {
   ADMIN_MANAGE_USERS: 'admin.manage_users',
   ADMIN_VIEW_AUDIT: 'admin.view_audit',
   ADMIN_MANAGE_CONFIG: 'admin.manage_config',
+
+  // Reports
+  REPORTS_READ: 'reports.read',
 }
 
 // Permission categories for organization
@@ -52,4 +58,6 @@ export const PERMISSION_CATEGORIES = {
   hr: 'HR & Recruitment',
   support: 'Support',
   admin: 'Administration',
+  branches: 'Branches',
+  reports: 'Reports',
 }

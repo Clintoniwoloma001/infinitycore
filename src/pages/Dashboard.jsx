@@ -7,16 +7,19 @@ import { customers as customerSvc, loanApplications, loans as loanSvc, repayment
 import { formatCurrency, StatusBadge } from '../lib/utils'
 import { RISK_META, LOAN_STATUS_META } from '../lib/loanScoring'
 import { useAuth } from '../hooks/useAuth'
+import { ErrorState } from '../components/PageStates'
 
 export default function Dashboard() {
   const [stats, setStats] = useState(null)
   const [recent, setRecent] = useState([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
   const { name } = useAuth()
 
   useEffect(() => {
     (async () => {
       try {
+        setError('')
         const [c, la, l, r] = await Promise.all([
           customerSvc.list(), loanApplications.list(), loanSvc.list(), repaymentSvc.list(),
         ])
@@ -36,6 +39,9 @@ export default function Dashboard() {
       } catch (e) {
         // eslint-disable-next-line no-console
         console.error(e)
+        setStats({ customers: 0, loans: 0, totalDisbursed: 0, pending: 0, riskData: [], statusData: [] })
+        setRecent([])
+        setError(e?.message || 'Unable to load dashboard data')
       } finally {
         setLoading(false)
       }
@@ -43,6 +49,7 @@ export default function Dashboard() {
   }, [])
 
   if (loading) return <div className="flex justify-center py-24"><div className="w-8 h-8 border-4 border-slate-200 border-t-[#009944] rounded-full animate-spin" /></div>
+  if (error) return <ErrorState title="Unable to load dashboard" message={error} />
 
   const StatCard = ({ icon: Icon, label, value, accent }) => (
     <div className="bg-white rounded-2xl border border-slate-200 p-5 flex items-start gap-4">

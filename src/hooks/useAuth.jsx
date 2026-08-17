@@ -9,6 +9,7 @@ export function AuthProvider({ children }) {
   const [profile, setProfile] = useState(null)
   const [loading, setLoading] = useState(true)
   const [authError, setAuthError] = useState(false)
+  const [profileError, setProfileError] = useState(null)
   const [viewingAsRole, setViewingAsRole] = useState(null)
 
   const fetchProfile = async (sessionUser) => {
@@ -17,11 +18,15 @@ export function AuthProvider({ children }) {
       return null
     }
     try {
-      const { data } = await supabase.from('profiles').select('*').eq('id', sessionUser.id).single()
+      const { data, error } = await supabase.from('profiles').select('*').eq('id', sessionUser.id).single()
+      if (error) throw error
       setProfile(data)
+      setProfileError(null)
       return data
     } catch (e) {
       console.error('Error fetching profile:', e)
+      setProfile(null)
+      setProfileError(e?.message || 'Profile unavailable')
       return null
     }
   }
@@ -75,6 +80,7 @@ export function AuthProvider({ children }) {
     await supabase.auth.signOut()
     setUser(null)
     setProfile(null)
+    setProfileError(null)
     setViewingAsRole(null)
   }
 
@@ -112,6 +118,10 @@ export function AuthProvider({ children }) {
     canManageHR: hasPermission('hr.jobs.create') || hasPermission('hr.jobs.manage'),
     canScreenCandidates: hasPermission('hr.applications.screen'),
     canHire: hasPermission('hr.hire'),
+    canReadPayroll: hasPermission('hr.payroll.read'),
+    canReadOfferLetters: hasPermission('hr.offer_letters.read'),
+    canReadBranches: hasPermission('branches.read'),
+    canReadReports: hasPermission('reports.read'),
 
     canCreateSupport: hasPermission('support.create'),
     canReadSupport: hasPermission('support.read'),
@@ -127,6 +137,7 @@ export function AuthProvider({ children }) {
     profile,
     loading,
     authError,
+    profileError,
     signIn,
     signUp,
     signOut,
@@ -146,6 +157,7 @@ export function AuthProvider({ children }) {
     hasAnyPermission,
     hasAllPermissions,
     permissions,
+    canApprove: hasPermission('loans.approve_low') || hasPermission('loans.approve_medium') || hasPermission('loans.approve_high') || hasPermission('loans.disburse'),
 
     name: profile?.full_name || user?.email || 'User',
     email: user?.email,

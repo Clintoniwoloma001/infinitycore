@@ -22,7 +22,7 @@ export default function Login() {
       else await signUp(email, password)
       try {
         const res = await promoteSuperadmin(email)
-        if (res?.promoted) { window.location.href = '/'; return }
+        if (res?.promoted) { navigate('/'); return }
       } catch { /* best-effort */ }
       navigate('/')
     } catch (err) {
