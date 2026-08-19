@@ -122,6 +122,7 @@ export function AuthProvider({ children }) {
     canReadOfferLetters: hasPermission('hr.offer_letters.read'),
     canReadBranches: hasPermission('branches.read'),
     canReadReports: hasPermission('reports.read'),
+    canManageLeave: hasPermission('hr.leave.manage'),
 
     canCreateSupport: hasPermission('support.create'),
     canReadSupport: hasPermission('support.read'),

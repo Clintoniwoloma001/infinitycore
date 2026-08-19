@@ -156,8 +156,12 @@ alter table public.audit_logs        enable row level security;
 alter table public.notifications     enable row level security;
 
 -- Helper: current user's role
+-- security definer is REQUIRED here: without it, this function's own
+-- lookup against public.profiles gets re-checked by profiles' RLS
+-- policy, which calls this function again — infinite recursion
+-- ("stack depth limit exceeded"). Do not remove security definer.
 create or replace function public.current_role()
-returns text language sql stable as $$
+returns text language sql stable security definer set search_path = public as $$
   select coalesce((select role from public.profiles where id = auth.uid()), 'staff');
 $$;
 

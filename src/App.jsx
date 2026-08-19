@@ -10,6 +10,7 @@ import Customers from './pages/Customers'
 import Loans from './pages/Loans'
 import Repayments from './pages/Repayments'
 import LeaveRequests from './pages/LeaveRequests'
+import LeaveBalances from './pages/LeaveBalances'
 import AuditLogs from './pages/AuditLogs'
 import Users from './pages/Users'
 import CustomerDashboard from './pages/CustomerDashboard'
@@ -30,6 +31,7 @@ const pageComponents = {
   Loans,
   Repayments,
   LeaveRequests,
+  LeaveBalances,
   AuditLogs,
   Users,
   MyWork,

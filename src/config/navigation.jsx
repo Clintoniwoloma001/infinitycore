@@ -27,6 +27,7 @@ export const routeConfig = [
       { label: 'Loans', path: '/loans', icon: Landmark, element: 'Loans', permissions: [PERMISSIONS.LOANS_READ] },
       { label: 'Repayments', path: '/repayments', icon: Wallet, element: 'Repayments', permissions: [PERMISSIONS.LOANS_READ] },
       { label: 'Leave Requests', path: '/leave-requests', icon: CalendarDays, element: 'LeaveRequests', permissions: [] },
+      { label: 'Leave Balances', path: '/leave-balances', icon: ListChecks, element: 'LeaveBalances', permissions: [PERMISSIONS.HR_LEAVE_MANAGE] },
     ],
   },
   {

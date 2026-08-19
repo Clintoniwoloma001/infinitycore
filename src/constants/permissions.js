@@ -34,6 +34,7 @@ export const PERMISSIONS = {
   HR_HIRE: 'hr.hire',
   HR_PAYROLL_READ: 'hr.payroll.read',
   HR_OFFER_LETTERS_READ: 'hr.offer_letters.read',
+  HR_LEAVE_MANAGE: 'hr.leave.manage',
   BRANCHES_READ: 'branches.read',
 
   // Support
